@@ -8,7 +8,7 @@
 * <a href=#mantis>安裝 Mantis</a>
 * <a href=#apache>設定 Apache</a>
 * <a href=#access>Mantis 網頁介面的權限</a>
-* <a href=#summary>others</a>
+* <a href=#others>其他設定</a>
 * <a href=#reference>文獻</a>
 
 <h2 id=introduction>介紹</h2>
