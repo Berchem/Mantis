@@ -192,6 +192,7 @@ firewall-cmd --reload
 <img src="./screen/screenshot-of-mantis-dashboard.png" width="100%">
 
 <h2 id=others>其他設定</h2>
+
 * <a href="./modify_password">由資料庫修改密碼</a>
 * 修改上傳檔案限制
 * 安裝 Mantis 擴充套件
