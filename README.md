@@ -20,6 +20,7 @@ Mantis 是一個建構在網頁上的議題追蹤性統，(用 PHP 寫的開源�
 5. 能夠方便地與其它版本控制系統做結合。
 
 <h2 id=requirements>軟體需求</h2>
+
 * CentOS 7. (Basic Web Server)
 
 <h2 id=started>升級作業系統</h2>
