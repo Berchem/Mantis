@@ -38,16 +38,21 @@ sudo yum install -y
 在開始安裝 Mantis 之前，需要先安裝 LAMP 組態在你的系統
 
 安裝 Apache 和 MariaDB
+
 ```shell
 yum install httpd mariadb mariadb-server -y
 ```
+
 安裝 php
+
 ```shell
 yum install epel-release -y
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 yum install php71w php71w-cli php71w-mysqli php71w-mbstring -y
 ```
+
 安裝完成後，啟動 Apache 和 MariaDB 服務，並且設定開機同時啟動
+
 ```shell
 sudo systemctl start httpd
 sudo systemctl start mariadb
@@ -57,10 +62,13 @@ sudo systemctl enable mariadb
 
 <h2 id=database>設定資料庫</h2>
 設定 root 密碼
+
 ```shell
 sudo mysql_secure_installation
 ```
+
 回答 terminal 上，逐條出現的問題
+
 ```shell
 Enter current password for root (enter for none): Enter
 Set root password? [Y/n]: Y
@@ -71,15 +79,21 @@ Disallow root login remotely? [Y/n]: Y
 Remove test database and access to it? [Y/n]: Y
 Reload privilege tables now? [Y/n]: Y
 ```
+
 登入 MariaDB，隨後輸入上一步驟所設定的密碼
+
 ```shell
 mysql -u root -p
 ```
+
 登入 MariaDB 後，創建一個 Mantis 使用的資料庫 *mantisdb*
+
 ```mysql
 MariaDB [(none)]> create database mantisdb;
 ```
+
 創建 Mantis 登入資料庫的使用者與帳號
+
 ```mysql
 MariaDB [(none)]> create user 'mantisAdmin'@'localhost' IDENTIFIED BY 'password';
 MariaDB [(none)]> grant all on mantisdb.* to 'mantisAdmin'@'localhost' identified by 'password' with grant option;
@@ -89,32 +103,42 @@ MariaDB [(none)]> \q
 
 <h2 id=mantis>安裝 Mantis</h2>
 下載 Mantis 的最新版本
+
 ```shell
 wget https://downloads.sourceforge.net/project/mantisbt/mantis-stable/2.18.0/mantisbt-2.18.0.zip
 ```
+
 解壓縮
+
 ```shell
 unzip mantisbt-2.18.0.zip
 ```
+
 把解壓縮地的資料夾移動到 Apache 的根目錄
+
 ```shell
 sudo mv mantisbt-2.18.0  /var/www/html/mantis
 ```
+
 給予 Mantis 資料夾 Apache 的群組與權限
+
 ```shell
 chown -R apache:apache /var/www/html/mantis
 ```
 
 <h2 id=apache>設定 Apache</h2>
 創建 */etc/httpd/conf.d/mantis.conf* 檔案，設定 Apache 的虛擬伺服器指向 Mantis
+
 ```shell
 vim /etc/httpd/conf.d/mantis.conf
 ```
+
 加入下列設定敘述：
 
 修改 *ServerAdmin* 與 *ServerName* 成伺服器的 domain name 或 IP address
 
 例如 *Servername 帳號@IP位置*
+
 ```shell
 <VirtualHost *:80>
     ServerAdmin admin@example.com
@@ -137,11 +161,15 @@ vim /etc/httpd/conf.d/mantis.conf
     ErrorLog /var/log/httpd/mantis_error.log
 </VirtualHost>
 ```
+
 儲存設定後，重啟 Apache 服務
+
 ```
 sudo systemctl restart httpd
 ```
+
 開啟防火牆、開取80埠
+
 ```
 systemctl start firewalld.service
 firewall-cmd --zone=public --add-service=http --permanent
