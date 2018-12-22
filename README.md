@@ -8,20 +8,15 @@
 * <a href=#mantis>安裝 Mantis</a>
 * <a href=#apache>設定 Apache</a>
 * <a href=#access>Mantis 網頁介面的權限</a>
-* <a href=#summary>總結</a>
+* <a href=#summary>others</a>
 * <a href=#reference>文獻</a>
 
 <h2 id=introduction>介紹</h2>
 Mantis 是一個建構在網頁上的議題追蹤性統，(用 PHP 寫的開源軟體)。Mantis 具有幾個特徵：
-
 1. 能夠寄送 Email 和 RSS 通知。
-
 2. 客製化議題表單、通知、工作流程。
-
 3. 強大的權限控制。
-
 4. 時序追蹤以及原始碼擴充。
-
 5. 能夠方便地與其它版本控制系統做結合。
 
 <h2 id=requirements>軟體需求</h2>
@@ -29,9 +24,11 @@ Mantis 是一個建構在網頁上的議題追蹤性統，(用 PHP 寫的開源�
 
 <h2 id=started>升級作業系統</h2>
 首先你需要升級的作業系統至最新版本
+
 ```shell
 sudo yum install -y
 ```
+
 假如目前的做也系統已經是最新版本，可跳過這個步驟。
 
 <h2 id=lamp>安裝 LAMP</h2>
@@ -178,7 +175,23 @@ firewall-cmd --reload
 
 <h2 id=access>Mantis 網頁介面的權限</h2>
 
-<h2 id=summary>總結</h2>
+開啟瀏覽器輸入URL *http://your-server-ip* 會出現以下畫面：
+
+<img src="./screen/screenshot-of-mantis-install-screen.png" width="100%">
+
+填寫相對應的資料後，例如：資料庫的使用者、登入端、密碼，按下 **Install/Upgrade Database** 會出現以下畫面：
+
+<img src="./screen/screenshot-of-mantis-login-screen.png" width="100%">
+
+按下 **Continue** 登入 Mantis dashboard：
+
+<img src="./screen/screenshot-of-mantis-install-complete.png" width="100%">
+
+輸入預設帳號 *administrator* 以及預設密碼 *root*，進入 Mantis dashboard 修改管理者密碼：
+
+<img src="./screen/screenshot-of-mantis-dashboard.png" width="100%">
+
+<h2 id=others>其他設定</h2>
 
 <h2 id=reference>文獻</h2>
 <a href="https://devops.profitbricks.com/tutorials/how-to-install-mantisbt-on-centos-7/">How to Install MantisBT on CentOS 7</a>
