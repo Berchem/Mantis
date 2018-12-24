@@ -1,26 +1,26 @@
 ## 內容
 
-* <a href=#introduction>介紹</a>
-* <a href=#requirements>軟體需求</a>
-* <a href=#started>升級作業系統</a>
-* <a href=#lamp>安裝 LAMP</a>
-* <a href=#database>設定資料庫</a>
-* <a href=#mantis>安裝 Mantis</a>
-* <a href=#apache>設定 Apache</a>
-* <a href=#access>Mantis 網頁介面的權限</a>
-* <a href=#others>其他設定</a>
-* <a href=#reference>文獻</a>
+* [介紹](#introduction)
+* [軟體需求](#requirements)
+* [升級作業系統](#started)
+* [安裝 LAMP](#lamp)
+* [設定資料庫](#database)
+* [安裝 Mantis](#mantis)
+* [設定 Apache](#apache)
+* [Mantis 網頁介面的權限](#access)
+* [其他設定](#others)
+* [文獻](#reference)
 
-<h2 id=introduction>介紹</h2>
+## <a name=introduction>介紹</a>
+
 Mantis 是一個建構在網頁上的議題追蹤性統，(用 PHP 寫的開源軟體)。Mantis 具有幾個特徵：
-
 1. 能夠寄送 Email 和 RSS 通知。
 2. 客製化議題表單、通知、工作流程。
 3. 強大的權限控制。
 4. 時序追蹤以及原始碼擴充。
 5. 能夠方便地與其它版本控制系統做結合。
 
-<h2 id=requirements>軟體需求</h2>
+## <a name=requirements>軟體需求</a>
 
 * CentOS 7. (Basic Web Server)
 
@@ -33,7 +33,7 @@ sudo yum install -y
 
 假如目前的做也系統已經是最新版本，可跳過這個步驟。
 
-<h2 id=lamp>安裝 LAMP</h2>
+## <a name=lamp>安裝 LAMP</a>
 在開始安裝 Mantis 之前，需要先安裝 LAMP 組態在你的系統
 
 安裝 Apache 和 MariaDB
@@ -100,7 +100,7 @@ MariaDB [(none)]> flush privileges;
 MariaDB [(none)]> \q
 ```
 
-<h2 id=mantis>安裝 Mantis</h2>
+## <a name=mantis>安裝 Mantis</a>
 下載 Mantis 的最新版本
 
 ```shell
@@ -125,8 +125,8 @@ sudo mv mantisbt-2.18.0  /var/www/html/mantis
 chown -R apache:apache /var/www/html/mantis
 ```
 
-<h2 id=apache>設定 Apache</h2>
-創建 */etc/httpd/conf.d/mantis.conf* 檔案，設定 Apache 的虛擬伺服器指向 Mantis
+## <a name=apache>設定 Apache</a>
+創建 ```/etc/httpd/conf.d/mantis.conf``` 檔案，設定 Apache 的虛擬伺服器指向 Mantis
 
 ```shell
 vim /etc/httpd/conf.d/mantis.conf
@@ -175,7 +175,7 @@ firewall-cmd --zone=public --add-service=http --permanent
 firewall-cmd --reload
 ```
 
-<h2 id=access>Mantis 網頁介面的權限</h2>
+## <a name=access>Mantis 網頁介面的權限</a>
 
 開啟瀏覽器輸入URL *http://your-server-ip* 會出現以下畫面：
 
@@ -193,11 +193,11 @@ firewall-cmd --reload
 
 <img src="./screen/screenshot-of-mantis-dashboard.png" width="100%">
 
-<h2 id=others>其他設定</h2>
-
+## <a name=others>其他設定</a>
 * <a href="./modify_password">由資料庫修改密碼</a>
-* <a href="./upload_limit">修改上傳檔案限制</a>
-* <a href="./install_plugin">安裝 Mantis 擴充套件</a>
+* 修改上傳檔案限制
+* 安裝 Mantis 擴充套件
 
-<h2 id=reference>文獻</h2>
-<a href="https://devops.profitbricks.com/tutorials/how-to-install-mantisbt-on-centos-7/">How to Install MantisBT on CentOS 7</a>
+## <a name=reference>文獻</a>
+* <a href="https://devops.profitbricks.com/tutorials/how-to-install-mantisbt-on-centos-7/">How to Install MantisBT on CentOS 7</a>
+* <a href="https://www.howtoforge.com/tutorial/how-to-install-mantis-bug-tracker-on-centos-7/">How to Install Mantis Bug Tracker on CentOS 7</a>
