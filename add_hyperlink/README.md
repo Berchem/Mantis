@@ -39,3 +39,7 @@ function print_column_summary( BugData $p_bug, $p_columns_target = COLUMNS_TARGE
 ```
 systemctl restart httpd
 ```
+
+**See also**
+
+* <a href="https://mantisbt.org/forums/viewtopic.php?t=24165">How to make summary description as a link to bug id?</a>

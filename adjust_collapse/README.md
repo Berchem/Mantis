@@ -37,3 +37,8 @@ function is_collapsed( $p_block ) {
 ```
 systemctl restart httpd
 ```
+
+**See also**
+
+* <a href="https://mantisbt.org/forums/viewtopic.php?t=308">'Collapsed by default' in collapse_api + minor improvements</a>
+* <a href="https://www.mantisbt.org/forums/viewtopic.php?t=25298">Filter box collapsed by default?</a>
