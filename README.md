@@ -206,4 +206,4 @@ firewall-cmd --reload
 
 ## <a name=reference>文獻</a>
 * <a href="https://devops.profitbricks.com/tutorials/how-to-install-mantisbt-on-centos-7/">How to Install MantisBT on CentOS 7</a>
-* <a href="https://www.howtoforge.com/tutorial/how-to-install-mantis-bug-tracker-on-centos-7/">How to Install Mantis Bug Tracker on CentOS 7</a>* 
+* <a href="https://www.howtoforge.com/tutorial/how-to-install-mantis-bug-tracker-on-centos-7/">How to Install Mantis Bug Tracker on CentOS 7</a>
