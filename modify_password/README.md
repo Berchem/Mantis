@@ -19,3 +19,7 @@ update mantis_user_table set password=md5('helloWorld') where username = 'Berche
 注意：
 
 請勿使用 *replace*，Mantis 在網頁上創立帳號後，會記錄 cookie string，*cookie_string* 預設為 NULL，如果這個欄位被取代掉，這個帳號登入時，會出現 cookie error。
+
+**See also**
+
+* <a href="https://gist.github.com/anytizer/11420125">Reset user password in Mantis Bug Tracker</a>
