@@ -22,9 +22,10 @@ Mantis 是一個建構在網頁上的議題追蹤性統，(用 PHP 寫的開源�
 
 ## <a name=requirements>軟體需求</a>
 
-* CentOS 7. (Basic Web Server)
-* PHP 7.1
+* CentOS 7 (Basic Web Server)
+* Apache 2.4
 * MariaDB 5.5.60
+* PHP 7.1
 
 <h2 id=started>升級作業系統</h2>
 首先你需要升級的作業系統至最新版本
@@ -197,9 +198,10 @@ firewall-cmd --reload
 
 ## <a name=others>其他設定</a>
 * <a href="./modify_password">由資料庫修改密碼</a>
-* <a href="./upload_limit">修改上傳檔案限制</a>
 * <a href="./install_plugin">安裝 Mantis 擴充套件</a>
+* <a href="./upload_limit">修改上傳檔案限制</a>
 * <a href="./add_hyperlink">摘要加入超連結</a>
+* <a href="./adjust_collapse">調整版型收疊</a>
 
 ## <a name=reference>文獻</a>
 * <a href="https://devops.profitbricks.com/tutorials/how-to-install-mantisbt-on-centos-7/">How to Install MantisBT on CentOS 7</a>
