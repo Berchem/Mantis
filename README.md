@@ -196,7 +196,7 @@ firewall-cmd --reload
 ## <a name=others>其他設定</a>
 * <a href="./modify_password">由資料庫修改密碼</a>
 * 修改上傳檔案限制
-* 安裝 Mantis 擴充套件
+* <a href="./install_plugin">安裝 Mantis 擴充套件</a>
 
 ## <a name=reference>文獻</a>
 * <a href="https://devops.profitbricks.com/tutorials/how-to-install-mantisbt-on-centos-7/">How to Install MantisBT on CentOS 7</a>
