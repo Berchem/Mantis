@@ -79,7 +79,13 @@ timetracking-master/
     └─ 套件安裝與初始化頁面.php
 ```
 
-以 <a href="https://github.com/mantisbt-plugins/csv-import">Import CSV file</a> 為例：
+以 <a href="https://github.com/mantisbt-plugins/csv-import">Import CSV file</a> 為例，移動模組至 Mantis 套件目錄：
+
+```
+mv csv-import-master /var/www/html/mantis/plugins/Csv_import
+```
+
+結果如下:
 
 ```
 /var/www/html/mantis/plugins
