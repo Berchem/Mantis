@@ -203,6 +203,7 @@ firewall-cmd --reload
 * <a href="./add_hyperlink">摘要加入超連結</a>
 * <a href="./adjust_collapse">調整版型收疊</a>
 * <a href="./email_off">關閉郵件通知</a>
+* <a href="./php_session_setting">APPLICATION ERROR #2800</a>
 
 ## <a name=reference>文獻</a>
 * <a href="https://devops.profitbricks.com/tutorials/how-to-install-mantisbt-on-centos-7/">How to Install MantisBT on CentOS 7</a>
