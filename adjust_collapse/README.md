@@ -32,6 +32,20 @@ function is_collapsed( $p_block ) {
 }
 ```
 
+若僅只修改 Sidebar 的收疊，修改 ```function collapse_cache_token``` 新增 ```$t_data``` array 至 202 行：
+
+```
+new old
+197 197        if( !is_null( $t_token ) ) {
+198 198                $t_data = json_decode( $t_token, true );
+199 199        } else {
+200 200                $t_data = array();
+201 201                $t_data['filter'] = false;
+202     +              $t_data['sidebar'] = true;
+203 202        }
+
+```
+
 重啟服務
 
 ```
